@@ -65,7 +65,8 @@ function bookCreate(title, summary, isbn, author, genre, cb) {
   bookdetail = { 
     title: title,
     summary: summary,
-    author: author
+    author: author,
+    isbn: isbn
   }
   if (genre != false) bookdetail.genre = genre
     
@@ -82,9 +83,10 @@ function bookCreate(title, summary, isbn, author, genre, cb) {
 }
 
 
-function bookInstanceCreate(book, due_back, status, cb) {
+function bookInstanceCreate(book, imprint, due_back, status, cb) {
   bookinstancedetail = { 
     book: book,
+    imprint: imprint
   }    
   if (due_back != false) bookinstancedetail.due_back = due_back
   if (status != false) bookinstancedetail.status = status
@@ -153,10 +155,10 @@ function createBooks(cb) {
           bookCreate("Death Wave","In Ben Bova's previous novel New Earth, Jordan Kell led the first human mission beyond the solar system. They discovered the ruins of an ancient alien civilization. But one alien AI survived, and it revealed to Jordan Kell that an explosion in the black hole at the heart of the Milky Way galaxy has created a wave of deadly radiation, expanding out from the core toward Earth. Unless the human race acts to save itself, all life on Earth will be wiped out...", '9780765379504', authors[1], [genres[1],], callback);
         },
         function(callback) {
-          bookCreate('Test Book 1', 'Summary of test book 1', authors[4], [genres[0],genres[1]], callback);
+          bookCreate('Test Book 1', 'Summary of test book 1', 'ISBN111111', authors[4], [genres[0],genres[1]], callback);
         },
         function(callback) {
-          bookCreate('Test Book 2', 'Summary of test book 2', authors[4], false, callback)
+          bookCreate('Test Book 2', 'Summary of test book 2', 'ISBN222222', authors[4], false, callback)
         }
         ],
         // optional callback
@@ -192,6 +194,12 @@ function createBookInstances(cb) {
         },
         function(callback) {
           bookInstanceCreate(books[4], 'New York, NY Tom Doherty Associates, LLC, 2015.', false, 'Loaned', callback)
+        },
+        function(callback) {
+          bookInstanceCreate(books[0], 'Imprint XXX2', false, false, callback)
+        },
+        function(callback) {
+          bookInstanceCreate(books[1], 'Imprint XXX3', false, false, callback)
         }
         ],
         // Optional callback

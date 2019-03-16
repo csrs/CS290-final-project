@@ -1,3 +1,82 @@
+html {
+  height:100%;
+  width:100%;
+}
+
+body {
+  background: -moz-radial-gradient(center, ellipse cover, rgba(182,215,226,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(182,215,226,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(182,215,226,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6d7e2', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.list-item {
+  background-color: #cfe0e633;
+  padding: 15px 20px;
+  border: 15px solid rgba(123, 153, 172, 0.1);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.list-item:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Srisakdi', cursive;
+}
+
+button, p, li, a, h2, h3, h4, h5, h6, .form-control, label, option {
+  font-family: 'Overpass', sans-serif;
+}
+
+a:hover {
+  color:#0a417d;
+}
+
+.author {
+  font-style:italic;
+}
+
+button, .button {
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  background-color: #007bff;
+  border:none;
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding:7px 15px;
+}
+button:hover, .button:hover {
+  border-bottom: 5px solid #063d77;
+  color:white;
+  text-decoration: none;
+}
+
+button a {
+  color:white;
+}
+
+ul.sidebar-section {
+  padding-left: 0;
+}
+
+ul.sidebar-section li {
+  list-style-type: none;
+}
+
 .sidebar-nav {
   margin-top: 20px;
   padding: 0;
@@ -11,7 +90,8 @@
 .tag {
   background-color: lightgray;
   color: black;
-  padding: 5px;
+  padding: 8px;
+  margin: 0 10px;
   border: 1px solid gray;
-  border-radius: 15px;
+  border-radius: 20px;
 }
