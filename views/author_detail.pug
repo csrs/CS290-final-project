@@ -3,7 +3,6 @@ extends layout
 block content
 
   h2 Author: #{author.name}
-  p #{author.lifespan}
   
   div
 
@@ -16,7 +15,10 @@ block content
       dd #{book.summary}
 
     else
-      p This author has no books.
+      p This author has no books. Why don't you create their 
+        a(href='/catalog/book/create') first book
+        span . 
+      
       
   hr
   p

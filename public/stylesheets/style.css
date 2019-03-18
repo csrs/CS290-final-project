@@ -38,9 +38,16 @@ button, p, li, a, h2, h3, h4, h5, h6, .form-control, label, option {
   font-family: 'Overpass', sans-serif;
 }
 
-a:hover {
-  color:#0a417d;
+.list-item p, li a {
+  color:#1c599a;
 }
+
+a:hover p {
+  color:#1c599a;
+  text-decoration:underline;
+}
+
+
 
 .author {
   font-style:italic;
